@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+ 
+  "name": "FirstRowSports++",
+  "version": "0.1.0",
+  "description": "Improve FirstRowSports experience",
+ 
+  "content_scripts": [{
+    "js": ["js/jquery-3.1.1.min.js", "js/CleanupHome.js"],
+    "css": ["css/mainPage.css"],
+    "matches": ["*://*.ifirstrowus.eu/*"],
+	"exclude_matches": ["*://*.ifirstrowus.eu/watch/*"]
+  },{
+    "js": ["js/jquery-3.1.1.min.js", "js/CleanupView.js"],
+	"matches": ["*://*.ifirstrowus.eu/watch/*"]
+  }
+  ]
+ 
+}
