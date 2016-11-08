@@ -1,16 +1,52 @@
-function RemoveAllButElementIfFound(element, name)
+function AddClassToElementFamily(element)
 {
-	if (!element.length) { alert("couldn't find " + name); return; }
+	element.parents().addClass("PartOfCleanView");
+	element.find("*").addClass("PartOfCleanView");
+	element.addClass("PartOfCleanView");
+}
 
-	element.parents().addClass("Eric");
-	element.find("*").addClass("Eric");
-	element.addClass("Eric");
+function RemoveAllButElementIfFound(element)
+{
+	if (!element.length) { return; }
 	
-	$("*").not(".Eric").remove();
+	AddClassToElementFamily(element);
+	
+	$("*").not(".PartOfCleanView").remove();
+}
+
+function CleanupVideoPlayerIfFound(element)
+{
+	if (!element.length) { return; }
+	
+	AddClassToElementFamily(element);
+	
+	$.each(element.siblings("object"), function()
+	{
+		$(this).addClass("PartOfCleanView");
+		$(this).find("*").addClass("PartOfCleanView");
+	});
+	
+	$("*").not(".PartOfCleanView").remove();
+}
+
+function CleanupMainPageIfFound(element)
+{
+	if (!element.length) { return; }
+	
+	AddClassToElementFamily(element);
+	
+	$("*").not(".PartOfCleanView").remove();
 }
 
 $(document).ready(function()
 {
-	RemoveAllButElementIfFound($("#player"), "player");
-	RemoveAllButElementIfFound($("embed"), "embed");
+	$("script").remove();
+	
+	CleanupMainPageIfFound($("#player"));
+	RemoveAllButElementIfFound($("iframe[src*='04stream.com/ebb.php'"), "iframe");
+	CleanupVideoPlayerIfFound($("#div1"));
+	
+	$("*").removeAttr("onclick");
 });
+
+$("script").remove();

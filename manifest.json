@@ -10,8 +10,10 @@
     "matches": ["*://*.ifirstrowus.eu/*"],
 	"exclude_matches": ["*://*.ifirstrowus.eu/watch/*"]
   },{
+    "all_frames":true,
     "js": ["js/jquery-3.1.1.min.js", "js/CleanupView.js"],
-	"matches": ["*://*.ifirstrowus.eu/watch/*"]
+	"matches": ["*://*.ifirstrowus.eu/watch/*", "*://*.firstrowas.co/embed/*",
+	"http://*.04stream.com/*"]
   }
   ]
  
