@@ -5,15 +5,17 @@
   "manifest_version": 2,
  
   "content_scripts": [{
-    "js": ["js/jquery-3.1.1.min.js", "js/CleanupHome.js"],
+    "js": ["js/jquery-3.1.1.min.js", "js/CleanUpMainPage.js"],
     "css": ["css/mainPage.css"],
     "matches": ["*://*.ifirstrowus.eu/*"],
 	"exclude_matches": ["*://*.ifirstrowus.eu/watch/*"]
   },{
     "all_frames":true,
-    "js": ["js/jquery-3.1.1.min.js", "js/CleanupView.js"],
+    "js": ["js/jquery-3.1.1.min.js", "js/CleanUpVideoPlayer.js"],
 	"matches": ["*://*.ifirstrowus.eu/watch/*", "*://*.firstrowas.co/embed/*",
-	"http://*.04stream.com/*"]
+	"http://*.04stream.com/*",
+	"http://live9.net/*",
+	"http://www3.sawlive.tv/embed/watch/*"]
   }
   ]
  
