@@ -13,9 +13,16 @@ $(document).ready(function()
 	if (!menu.length) { return; }
 	menu.append("<br></br>");
 	
-	AddClassToElementFamily(menu);
-	AddClassToElementFamily($("#accordion"));
+	// The Title of the page
 	AddClassToElementFamily($("img[alt='FirstRowSports']"));
+	
+	// Sports selector
+	AddClassToElementFamily(menu);
+	
+	// Events selector
+	AddClassToElementFamily($("#accordion"));
+	
+	// CSS for the images in the sports selector
 	AddClassToElementFamily($("link[href*='match.css'"));
 	
 	// Get rid of everything we don't approve of

@@ -44,12 +44,14 @@ function CleanUp04StreamFrame()
 	allElements.remoteAttr("click");
 	allElements.removeAttr("onclick");
 	
+	// This indicates the video hasn't started playing
 	if (videoPlayer.find("*").length === 0)
 	{
 		videoPlayer.bind("DOMSubtreeModified", function()
 		{
 			videoPlayer.parent().find(".helpText").remove();
 		});
+		
 		videoPlayer.parent().append('<h1 class="helpText" style="color:white;">Looks like you need to enable Flash. Look for the puzzle piece in the top right and select "Run all plugins this time"</h1>');
 	}
 }
