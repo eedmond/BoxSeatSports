@@ -43,10 +43,8 @@ function CleanUp04StreamFrame()
 	
 	RemoveAllButElementIfFound(videoPlayer);
 	
-	// Remove all click events in this frame because they usually create popups that adblock doesn't' catch
-	var allElements = $("*");
-	allElements.remoteAttr("click");
-	allElements.removeAttr("onclick");
+	// Remove all click events -- this needs to be improved
+	$("*").off("click onclick");
 	
 	// This indicates the video hasn't started playing
 	if (videoPlayer.find("*").length === 0)
