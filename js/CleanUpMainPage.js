@@ -16,6 +16,7 @@ $(document).ready(function()
 	AddClassToElementFamily(menu);
 	AddClassToElementFamily($("#accordion"));
 	AddClassToElementFamily($("img[alt='FirstRowSports']"));
+	AddClassToElementFamily($("link[href*='match.css'"));
 	
 	$("*").not(".PartOfCleanView").remove();
 	$("a").removeAttr("onclick");
