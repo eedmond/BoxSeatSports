@@ -16,6 +16,10 @@ function RemoveAllButElementIfFound(element)
 function CleanUpIFirstrowsportsFrame()
 {
 	RemoveAllButElementIfFound($("#player"));
+	if ($("#player").length === 0)
+	{
+		RemoveAllButElementIfFound($("img[src*='i34.tinypic.com']"));
+	}
 }
 
 function CleanUpIFirstrowEmbedFrame()
