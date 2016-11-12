@@ -1,10 +1,11 @@
 { 
-  "name": "FirstRowSports++",
+  "name": "BoxSeatSports",
   "description": "Improve FirstRowSports experience",
   "version": "0.1.0",
   "manifest_version": 2,
  
-  "content_scripts": [{
+  "content_scripts":
+  [{
     "js": ["js/jquery-3.1.1.min.js", "js/CleanUpMainPage.js"],
     "css": ["css/mainPage.css"],
     "matches": ["*://*.ifirstrowus.eu/*"],
@@ -18,7 +19,6 @@
 	"http://*.bro.adca.st/stream.php*",
 	"http://*.live9.net/*",
 	"http://www3.sawlive.tv/embed/watch/*"]
-  }
-  ]
+  }]
  
 }
